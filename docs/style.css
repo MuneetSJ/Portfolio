@@ -1,0 +1,165 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    
+    background-color: black;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+
+    background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%)
+}
+
+#navBar{
+    height: 7.5vh;
+    width: 100%;
+
+    position: fixed;;
+    display: flex;
+    
+    background-image: linear-gradient(rgb(0, 0, 0),transparent);
+
+    align-items: center;
+    justify-content: space-around;
+
+    text-decoration: none;
+    position: fixed;
+    transition: 0.2s;
+}
+
+#title{
+    margin: 5px;
+    color: white;
+}
+
+#stack{
+    display: none;
+}
+
+#links{
+    display: flex;
+
+    justify-content: space-around;
+    width: 30%;
+    list-style: none;
+}
+
+a:hover{
+    color: aqua;
+    font-weight: bold;
+    transition: all .5s ease;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+#home{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(public/BackGif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#home-content{
+    width: 50vw;
+    height: 40vh;
+
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 35vh;
+}
+
+#welcome-text{
+    font-size: 7.5vw;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 7.5vh;
+    margin-bottom: 0px;
+
+}
+
+#home-content > p{
+    display: flex;
+    justify-content: center;
+    font-size: 1vw;
+}
+
+#about, #projects ,#contact{
+    height: 100vh;
+    border: 5px solid aqua;
+
+  }
+
+#footer{
+    width: 100vw;
+    height: 5vh;
+    background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #links{
+        position: absolute;
+        top: 0vh;
+        height: 100vh;
+        width: 100vw;
+
+        margin: 0px;
+
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+
+        background: rgba(0, 0, 0, 0.9);
+
+        text-align: center;
+        transition: 0.5s;
+    }
+    #stack{
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+      }
+      
+      #bar1, #bar2, #bar3 {
+        width: 5vw;
+        height: 0.15vh;
+        background-color:white;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .active #bar1 {
+        -webkit-transform: rotate(-45deg) translate(-5px, 6px) ;
+        transform: rotate(-45deg) translate(-5px, 6px) ;
+      }
+      
+      .active #bar2 {
+        opacity: 0;
+      }
+      
+      .active #bar3 {
+        -webkit-transform: rotate(45deg) translate(-5px, -5px) ;
+        transform: rotate(45deg) translate(-5px, -5px) ;
+      }
+
+      .active-link{
+          flex-direction: column;
+          justify-content: space-around;
+          width: 100vw;
+          height: 100vw;
+          text-align: center;
+      }
+
+  }
