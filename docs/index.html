@@ -6,11 +6,12 @@
     <title>Muneet's Webstie</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+    <script src="https://kit.fontawesome.com/69814527c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav id="navBar">
-        <a href="#home">Muneet's Website</a>
+        <a href="#welcome">Muneet's Website</a>
         <div id="stack" onclick="navClick(this,links)">
             <div id="bar1"></div>
             <div id="bar2"></div>
@@ -24,20 +25,25 @@
         </ul>
     </nav>
 
-    <div id="home">
-        <div id="home-content">
+    <div id="welcome">
+        <div id="welcome-content">
             <h1 id="welcome-text">Hello World!</h1>
-            <p>Filler text. I'll think of something to put here</p>
+            <a id="welcome-link" href="#home">Learn More! <i class="far fa-hand-point-down"></i></a>
         </div>
     </div>
+    <div id="home">
+        <h1>Welcome</h1>
+        <p>Welcome to my webpage made from strach by ME!</p>
+        
+    </div>
     <div id="about">
-        <h1>About Me</h1>
+        <div class="parrallax-img1"><h1 class="title">About Me</h1></div>
     </div>
     <div id="projects">
-        <h1>My Projects</h1>
+        <div class="parrallax-img2"><h1 class="title">My Projects</h1></div>
     </div>
     <div id="contact">
-        <h1>Contact Me</h1>
+        <div class="parrallax-img3"><h1 class="title">Contact me</h1></div>
         <form action=""></form>
     </div>
     <div id="footer">
