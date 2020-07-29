@@ -6,9 +6,9 @@ body{
     padding: 0px;
     margin: 0px;
     
-    background-color: midnightblue;
+    background-color: #0B0C10;
     font-family: 'Ubuntu', sans-serif;
-    color: white;
+    color: #C5C6C7;
 
 }
 
@@ -21,7 +21,7 @@ body::-webkit-scrollbar-corner{
     display: none;
 }
 body::-webkit-scrollbar-track{
-    background-color: ghostwhite;
+    background-color:#C5C6C7;
 }
 
 body::-webkit-scrollbar-thumb{
@@ -79,10 +79,8 @@ nav a{
 #welcome{
     width: 100vw;
     height: 100vh;
-    background-image: url(public/BackGif.gif);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(Assets/Background.jpg);
+    background-size: contain;
 
     display: flex;
     justify-content: center;
@@ -102,30 +100,28 @@ nav a{
 }
 
 #welcome-content > a{
-    height: 6vh;
-    margin-left: 18vw;
-    margin-right: 18vw;
-    margin-top: -8vh;
-    padding-top: 2vh;
-
     text-decoration: none;
     display: flex;
-    text-align: center;
     justify-content: center;
+    margin: auto;   
 
+    width: 15vw;
+    height: 7.5vh;
     color: white;
-    border: 5px solid rgba(255, 255, 255, 0.5);
     font-size: 2vw;
 }
 
 #welcome-link:hover{
-    color: mediumturquoise;;
-    background: rgba(123, 223, 253, 0.25);
-    border: 5px solid mediumturquoise;;
-    transition: ease;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
 }
 
-#welcome-link:hover > .far{
+#welcome-link:hover > p >.fas{
+    color: black;
     -webkit-animation: bounce 1s infinite;
     animation: bounce 1s infinite;
 }
@@ -149,10 +145,28 @@ nav a{
       -o-transform: translateY(-7.5px);
       transform: translateY(-7.5px); } }
 
-#welcome-text{
-    font-size: 7.5vw;;
+#welcome-text-animation{
+    font-size: 6vw;
     display: inline-flex;
-}
+    width: 39vw;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 
 .parrallax-img1, .parrallax-img2, .parrallax-img3{
     padding-top: 0.5vh;
