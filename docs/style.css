@@ -5,6 +5,7 @@ html{
 body{
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
     
     background-color: #0B0C10;
     font-family: 'Ubuntu', sans-serif;
@@ -25,7 +26,7 @@ body::-webkit-scrollbar-track{
 }
 
 body::-webkit-scrollbar-thumb{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
@@ -37,7 +38,7 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     z-index: 1;
     
-    background-image: linear-gradient(rgb(0, 0, 0),transparent);
+    background-color: #0b0c10;
 
     align-items: center;
     justify-content: space-around;
@@ -49,7 +50,7 @@ body::-webkit-scrollbar-thumb{
 
 #title{
     margin: 5px;
-    color: white;
+    color: #C5C6C7;
 }
 
 #stack{
@@ -65,7 +66,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 a:hover{
-    color: mediumturquoise;
+    color: #66fcf1;
     font-weight: bold;
     transition: all .5s ease;
 
@@ -73,33 +74,38 @@ a:hover{
 
 nav a{
     text-decoration: none;
-    color: white;
+    color: #C5C6C7;
 }
 
 #welcome{
     width: 100vw;
     height: 100vh;
-    background-image: url(Assets/Background.jpg);
-    background-size: contain;
-
-    display: flex;
+    display: inline-block;
     justify-content: center;
-    color: white;
+    
+    background: linear-gradient(
+        to right, 
+        hsl(98 100% 62%), 
+        hsl(204 100% 59%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #welcome-content{
-    width: 50vw;
+    text-align: center;
+    margin: auto;
+    width: 100vw;
     height: 40vh;
+    font-family: monospace;
 
-    background: rgba(0, 0, 0, 0.5);
     margin-top: 35vh;
     text-align: center;
     white-space:nowrap;
-
-
 }
 
-#welcome-content > a{
+#welcome-link{
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -107,21 +113,22 @@ nav a{
 
     width: 15vw;
     height: 7.5vh;
-    color: white;
     font-size: 2vw;
 }
 
 #welcome-link:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
+    background: #66fcf1;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #0B0C10 ;
+    box-shadow: 0 0 5px #66fcf1,
+                0 0 25px #66fcf1,
+                0 0 50px #66fcf1,
+                0 0 200px #66fcf1;
 }
 
 #welcome-link:hover > p >.fas{
-    color: black;
+    color: #0B0C10;
     -webkit-animation: bounce 1s infinite;
     animation: bounce 1s infinite;
 }
@@ -145,21 +152,21 @@ nav a{
       -o-transform: translateY(-7.5px);
       transform: translateY(-7.5px); } }
 
-#welcome-text-animation{
+#welcome-text-heading{
     font-size: 6vw;
     display: inline-flex;
-    width: 39vw;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: monospace;
+    height: auto;
+    animation: blink .5s step-end infinite alternate;
+    border-right: 3px solid #C5C6C7;
+    margin-bottom: 0;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
+
+  #welcome-text-paragraph{
+    text-align: center;
+    font-size: 1.5vw;
+    display: inline-flex;
+    animation: blink .5s step-end infinite alternate;
+    border-right: 3px solid #C5C6C7;
   }
       
   @keyframes blink {
@@ -178,43 +185,47 @@ nav a{
 }
 
 .title{
-    vertical-align: middle;
+    margin: auto;
+    margin-left: 0;
+    font-size: 10vw;
     line-height: 25vh;
 }
 
-
-
-.parrallax-img1{
-    background-image: url(public/blue-space.jpg);
+#parrallax-img1{
+    background-image: url(Assets/AboutMe.jpg);
+    background-size: cover;
     background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #about{
     height: 100vh;
-    border-top: 5px solid blue;
-    background-color: blue;
 }
 
-.parrallax-img2{
-    background-image: url(public/green-space.jpg);
+#parrallax-img2{
+    background-image: url(Assets/MyProjects.jpg);
     background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #projects{
     height: 100vh;
-    border-top: 5px solid green;
-    background-color: green;
 }
 
-.parrallax-img3{
-    background-image: url(public/purple-space.jpg);
+#parrallax-img3{
+    background-image: url(Assets/ContactMe.jpg);
     background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #contact{
-    height: 100vh;
-    border-top: 5px solid purple;
-    background-color: purple;
+    height: 100vh;  
 }
 
 
@@ -224,7 +235,7 @@ nav a{
 #footer{
     width: 100vw;
     height: 5vh;
-    background-color: black;
+    background-color: #0B0C10;
 }
 
 @media only screen and (max-width: 600px) {
@@ -254,7 +265,7 @@ nav a{
       #bar1, #bar2, #bar3 {
         width: 5vw;
         height: 0.15vh;
-        background-color:white;
+        background-color:#C5C6C7;
         margin: 6px 0;
         transition: 0.4s;
       }
@@ -280,5 +291,4 @@ nav a{
           height: 100vw;
           text-align: center;
       }
-
   }

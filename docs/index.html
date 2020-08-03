@@ -12,12 +12,12 @@
 <body>
     <nav id="navBar">
         <a href="#welcome">Muneet Jaswal</a>
-        <div id="stack" onclick="navClick(this,links)">
+        <div id="stack" onclick="navClick(this)">
             <div id="bar1"></div>
             <div id="bar2"></div>
             <div id="bar3"></div>
           </div>
-        <ul id="links">
+        <ul id="links" onclick="hideMenu()">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li> 
@@ -26,26 +26,21 @@
 
     <div id="welcome">
         <div id="welcome-content">
-            <h1 id="welcome-text-animation">Hello World!</h1>
-            <a href=#home id="welcome-link"><p style="margin: auto;">Learn More! <i class="fas fa-hand-point-down"></i></p></a>
+            <h1 id="welcome-text-heading" ></h1>
+        </br>
+            <p id="welcome-text-paragraph"></p>
         </div>
-    </div>
-    <div id="home">
-        <h1>Welcome</h1>
-        <p>Welcome to my webpage made from strach by ME!</p>
-        
-    </div>
+        <a href=#about id="welcome-link"><p style="margin: auto;">Learn More! <i class="fas fa-hand-point-down"></i></p></a>
+    </div>  
     <div id="about">
-        <div class="parrallax-img1"><h1 class="title">About Me</h1></div>
+        <div id="parrallax-img1"><h1 class="title">About Me</h1></div>
     </div>
     <div id="projects">
-        <div class="parrallax-img2"><h1 class="title">My Projects</h1></div>
+        <div id="parrallax-img2"><h1 class="title" style="margin-left: 46vw;">My Projects</h1></div>
     </div>
     <div id="contact">
-        <div class="parrallax-img3"><h1 class="title">Contact me</h1></div>
+        <div id="parrallax-img3"><h1 class="title">Contact me</h1></div>
         <form action=""></form>
-    </div>
-    <div id="footer">
     </div>
 </body>
 </html>
