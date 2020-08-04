@@ -36,10 +36,8 @@ function navClick(stack){
 }
 
 function hideMenu(){
-  if(media.matches){
-    var stack = document.getElementById("stack");
-    stack.classList.toggle("active")
-  }
+  var menu = document.getElementById("links")
+  menu.style.display = "none"
 }
 
 function scrollFunction() {

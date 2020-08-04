@@ -163,7 +163,7 @@ nav a{
 
   #welcome-text-paragraph{
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 2vw;
     display: inline-flex;
     animation: blink .5s step-end infinite alternate;
     border-right: 3px solid #C5C6C7;
@@ -246,15 +246,12 @@ nav a{
         height: 100vh;
         width: 100vw;
 
-        margin: 0px;
-
         display: none;
         flex-direction: column;
         justify-content: space-around;
 
-        background: rgba(0, 0, 0, 0.9);
-
-        text-align: center;
+        background: #0B0C1095;
+        margin-left: 75vw;
     }
     #stack{
         display: inline-block;
@@ -271,8 +268,8 @@ nav a{
       }
       
       .active #bar1 {
-        -webkit-transform: rotate(-45deg) translate(-5px, 6px) ;
-        transform: rotate(-45deg) translate(-5px, 6px) ;
+        -webkit-transform: rotate(-45deg) translate(0px, 6px) ;
+        transform: rotate(-45deg) translate(-5px, 4px) ;
       }
       
       .active #bar2 {
